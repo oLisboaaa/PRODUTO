@@ -13,7 +13,8 @@ class gPessoa {
     private double altura; // A altura é armazenada em metros.
     private String email;
 
-    // Construtor que inicializa os atributos da classe, convertendo a altura de centímetros para metros e o email para minúsculas.
+    // Construtor que inicializa os atributos da classe, convertendo a altura de
+    // centímetros para metros e o email para minúsculas.
     public gPessoa(String nome, String sobrenome, Date dataNasc, double altura, String email) {
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -38,7 +39,8 @@ class gPessoa {
         return dataNasc;
     }
 
-    // Método que atualiza a data de nascimento, garantindo que não seja uma data futura.
+    // Método que atualiza a data de nascimento, garantindo que não seja uma data
+    // futura.
     public void setDataNasc(Date dataNasc) {
         if (dataNasc.after(new Date())) {
             System.out.println("Data inválida. A data de nascimento não pode ser posterior à data atual.");
@@ -77,7 +79,8 @@ class gPessoa {
 // A classe Pessoa contém o método principal que executa o programa.
 public class Pessoa {
     public static void main(String[] args) {
-        // Define o formato da data e inicializa a data de nascimento a partir de uma string.
+        // Define o formato da data e inicializa a data de nascimento a partir de uma
+        // string.
         SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
         Date dataNasc = null;
         try {
@@ -97,9 +100,9 @@ public class Pessoa {
 
         // Exibe as informações formatadas da pessoa.
         System.out.println(
-            "\n\nNome: " + gpessoa.getNomeCompleto() +
-            "\nData de nascimento: " + gpessoa.formatarDataNasc() +
-            "\nAltura: " + gpessoa.getAltura() + " M" +
-            "\nEmail: " + gpessoa.getEmail());
+                "\n\nNome: " + gpessoa.getNomeCompleto() +
+                        "\nData de nascimento: " + gpessoa.formatarDataNasc() +
+                        "\nAltura: " + gpessoa.getAltura() + " M" +
+                        "\nEmail: " + gpessoa.getEmail());
     }
 }
